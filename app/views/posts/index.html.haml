@@ -1,0 +1,13 @@
+.jumbotron
+  %h1 Posts
+  - if @posts.empty?
+    %h3 No posts to show you right now.
+  - else
+    %table.table.table-striped
+      %tbody
+        %tr
+          %th Title
+          %th Date Created
+        - @posts.each do |post|
+          %td= link_to post.title, '#'
+          %td= post.created_at.strftime("%-m/%-d/%Y")
