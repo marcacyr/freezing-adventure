@@ -17,3 +17,4 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'pry', group: :development
+gem 'awesome_print', group: :development

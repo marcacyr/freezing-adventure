@@ -9,8 +9,12 @@
           %th Title
           %th Date Created
           %th
+          %th
         - @posts.each do |post|
           %tr
             %td= link_to post.title, post_path(post)
             %td= post.created_at.strftime("%-m/%-d/%Y")
             %td= link_to "Edit post", edit_post_path(post)
+            %td= link_to "Delete post", post_path(post), method: :delete
+
+    = link_to "New post", new_post_path, class: "btn btn-primary btn-lg"
