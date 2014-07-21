@@ -3,11 +3,14 @@
   - if @posts.empty?
     %h3 No posts to show you right now.
   - else
-    %table.table.table-striped
+    %table.table
       %tbody
         %tr
           %th Title
           %th Date Created
+          %th
         - @posts.each do |post|
-          %td= link_to post.title, '#'
-          %td= post.created_at.strftime("%-m/%-d/%Y")
+          %tr
+            %td= link_to post.title, post_path(post)
+            %td= post.created_at.strftime("%-m/%-d/%Y")
+            %td= link_to "Edit post", edit_post_path(post)

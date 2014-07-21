@@ -1,0 +1,7 @@
+= form_for @post do |f|
+  = f.text_field :title, placeholder: "Title"
+  %br
+  %br
+  = f.text_area(:content, cols: 100, rows: 10, placeholder: "Content")
+  %br
+  = f.button :submit, class: "btn-primary btn-lg"

@@ -15,5 +15,5 @@ gem 'bson_ext'
 gem 'haml'
 gem 'haml-rails'
 gem 'bootstrap-sass'
-
-
+gem 'simple_form'
+gem 'pry', group: :development
