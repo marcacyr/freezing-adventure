@@ -18,3 +18,8 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'pry', group: :development
 gem 'awesome_print', group: :development
+gem 'bcrypt', '~> 3.1.7'
+
+group :development, :test do
+  gem 'rspec-rails'
+end

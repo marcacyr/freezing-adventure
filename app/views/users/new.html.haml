@@ -1,0 +1,20 @@
+.jumbotron.center
+  %h1 Sign Up
+  = minimal_form_for @user do |f|
+    - if @user.errors.any?
+      .error-messages
+        %h2 Form is invalid
+        %ul
+          - @user.errors.full_messages.each do |message|
+            %li= message
+    .field
+      = f.input :email
+    %br
+    .field
+      = f.input :password
+    %br
+    .field
+      = f.input :password_confirmation
+    %br
+    .actions
+      = f.submit "Sign Up", class: "btn btn-primary btn-lg"
